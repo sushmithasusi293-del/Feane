@@ -1,0 +1,510 @@
+.rowthree {
+    background-color: black;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+
+
+
+    
+}
+
+
+.cm1 {
+    width: 33%;
+
+    color: aliceblue;
+    font-style: oblique;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cm2 {
+    width: 33%;
+    color: aliceblue;
+    margin-top: 25px;
+
+
+}
+
+li {
+    display: inline;
+    padding-left: 10px;
+
+}
+
+.cm3 {
+    width: 33%;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+li button {
+    border-radius: 15px;
+    background-color: orange;
+    margin-left: 20px;
+    width: 150px;
+}
+
+.rowthree1 {
+    width: 100%;
+    /* display: flex; */
+    height: 600px;
+    background-color: black;
+
+    background-image: url(fe.jpg);
+    background-size: cover;
+    position: relative;
+    /* bottom: 130px; */
+    background-position: center;
+    overflow: hidden;
+
+}
+
+.cm4 {
+    width: 50%;
+
+}
+
+.cm5 {
+    width: 50%;
+    position: relative;
+
+}
+
+.cmm {
+    color: aliceblue;
+    margin-left: 50px;
+    padding-top: 130px;
+}
+
+.cmmm {
+    position: relative;
+    top: 450px;
+    right: 200px;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    border: 50px;
+    border-radius: 50px;
+    background-color: orange;
+}
+
+.rowthree3 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    font-style: italic;
+}
+
+.cm7 {
+    width: 50%;
+
+}
+
+.cr {
+
+    position: relative;
+    left: 80px;
+    top: 150px;
+}
+
+.card mb-3 {
+    border-radius: 20px;
+}
+
+.cm8 {
+    width: 50%;
+}
+
+.cr1 {
+
+    position: relative;
+    left: 50px;
+    top: 150px;
+}
+
+.col-md-8 {
+    background-color: black;
+    color: aliceblue;
+}
+
+.col-md-4 img {
+    border-radius: 100px;
+    font-size: 10px;
+
+}
+
+.col-md-4 {
+    background-color: black;
+
+}
+
+.crr1 {
+    height: 200px;
+    overflow: hidden;
+}
+
+.crr1 button {
+    height: 20px;
+    width: 50px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: 550px;
+    top: 50px;
+    border: none;
+}
+
+.crr1 h5 {
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+/* .crr2 img {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 150px;
+    top: 20px;
+}
+
+.card-group {
+
+    margin-left: 100px;
+} */
+
+.crr2 {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    padding-bottom: 30px;
+
+
+}
+
+.crr2 {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 400px;
+
+
+
+}
+
+.crr3 {
+    width: 33%;
+    height: 500px;
+    display: flex;
+}
+
+.crc3 {
+    margin-top: 0px;
+}
+
+.crf {
+    width: 12%;
+}
+
+.crf1 {
+    width: 11%;
+}
+
+.crc1 {
+    width: 33%;
+
+
+}
+
+.crc2 {
+    width: 33%;
+    height: 0px;
+
+}
+
+.crc3 {
+    width: 33%;
+    height: 0px;
+
+}
+
+.crr2 {
+    margin: 0px 0px 0px 50px;
+    overflow: hidden;
+    border: none;
+
+}
+
+.crr2 img {
+
+    width: 250px;
+    position: relative;
+    left: 100px;
+    top: 5px;
+    padding-right: 20px;
+}
+
+
+
+.cre {
+    margin: 50px 0px 0px 50px;
+}
+
+.cre img {
+
+    width: 250px;
+    position: relative;
+    left: 100px;
+    top: 15px;
+    bottom: 20px;
+}
+
+.bbbb {
+    margin-left: 650px;
+}
+
+.crc2 img {
+    padding-top: 50px;
+}
+
+.crc3 img {
+    padding-top: 0px;
+
+}
+
+.gr {
+    width: 100%;
+    height: 400px;
+    display: flex;
+
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.gc {
+    width: 33%;
+    margin-left: 50px;
+    margin-top: -40px;
+}
+
+.gc1 {
+    width: 33%;
+}
+
+.gc2 {
+    width: 33%;
+}
+
+.gr img {
+
+    width: 250px;
+    position: relative;
+    left: 100px;
+    top: 5px;
+    padding-right: 20px;
+
+}
+
+.gc1 img {
+    padding-top: 50px;
+}
+
+.gc2 img {
+    padding-top: 20px;
+
+}
+
+.gc img {
+    padding-top: 20px;
+
+}
+
+.nnnnn {
+
+    margin-left: 600px;
+}
+
+.gr2 {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    background-color: black;
+    overflow: hidden;
+    color: aliceblue;
+}
+
+.gcc1 {
+    width: 50%;
+}
+
+.gcc1 img {
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+.gcc2 {
+    width: 50%;
+    margin-top: 250px;
+    text-align: justify;
+}
+
+
+.gr3 {
+    width: 100%;
+    height: 600px;
+    display: flex;
+
+    overflow: hidden;
+    color: aliceblue;
+}
+
+.gcc3 {
+    width: 50%;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.gcc3 h1 {
+    color: black;
+    margin-left: 150px;
+}
+
+input {
+    width: 600px;
+    height: 50px;
+    float: right;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.gcc4 {
+    width: 50%;
+    margin-top: 100px;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.lo {
+    text-align: center;
+}
+
+.gr5 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+
+    overflow: hidden;
+    color: aliceblue;
+}
+
+.grr1 {
+    width: 50%;
+    color: black;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.grr2 {
+    width: 50%;
+    color: white;
+    /* margin-left: 40px;
+    margin-top: 50px; */
+    position: relative;
+    left: 650px;
+    margin-top: -320px;
+}
+
+.grr2 {
+    width: 50%;
+    color: black;
+}
+
+.ram img {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.vr {
+    height: 500px;
+
+}
+
+
+
+
+
+.rowthree9 {
+    width: 100%;
+    /* display: flex; */
+    height: 500px;
+    background-color: black;
+
+
+    overflow: hidden;
+
+}
+
+
+
+
+
+
+.cmmm1 {
+    position: relative;
+    top: 420px;
+    right: 50px;
+
+}
+
+.br {
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    height: 300px;
+    background-color: black;
+}
+
+.bc {
+    width: 33%;
+
+    text-align: center;
+    padding-left: 150px;
+    padding-top: 100px;
+
+}
+
+.bc1 {
+    width: 33%;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.bc2 {
+    width: 33%;
+    padding-top: 100px;
+    text-align: center;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: goldenrod;
+    background-color: transparent;
+    text-decoration: underline;
+}

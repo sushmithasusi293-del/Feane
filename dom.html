@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="v1">welcome</h1>
+    <h1 class="v2">hello</h1>
+    <p>A paragraph is a unit of writing composed of one or more sentences that centers on a single, coherent idea or
+        topic, serving to organize written work by creating a distinct section that is easy for readers to follow. Good
+        paragraphs typically begin with a topic sentence that introduces the main idea, followed by supporting sentences
+        that develop and explain this idea, and may conclude with a summary sentence. </p>
+    <div class="v3">
+        <h1>hello</h1>
+        <h2>hi</h2>
+    </div>
+
+    <div id="container">
+        <p>xcvbnm</p> 
+    </div>
+
+
+    <script>
+        let dom = document.getElementById("v1");
+        dom.style.color = "red";
+        let dom1 = document.getElementsByClassName("v2")[0];
+        dom1.style.color = "red";
+        dom1.style.backgroundColor = "yellow";
+        let dom2 = document.getElementsByTagName("p")[0];
+        dom2.style.color = "red"
+        let dom3 = document.querySelectorAll(".v3");
+        dom3[0].style.color = "blue";
+
+        let dom4 = document.createElement("p");
+        dom4.innerHTML = "A paragraph is a unit of writing composed of one or more sentences that centers on a single, coherent idea or topic, serving to organize written work by creating a distinct section that is easy for readers to follow. Good paragraphs typically begin with a topic sentence that introduces the main idea, followed by supporting sentences that develop and explain this idea, and may conclude with a summary sentence. "
+        document.body.appendChild(dom4);
+        dom4.style.color = "green";
+
+
+
+
+        let dom8 = document.createElement("h1");
+        dom8.innerHTML = "A paragraph is a unit of writing composed of one or more sentences that centers on a single, coherent idea or topic, serving to organize written work by creating a distinct section that is easy for readers to follow. Good paragraphs typically begin with a topic sentence that introduces the main idea, followed by supporting sentences that develop and explain this idea, and may conclude with a summary sentence. "
+        document.body.appendChild(dom8);
+        dom8.style.color = "green";
+
+
+
+
+
+        // <div id="container">
+        //     <p>xcvbnm</p>
+        // </div>
+
+
+        const container = document.getElementById("container");
+        const newParagraph = document.createElement("p");
+        newParagraph.innerHTML = "Hello, this is a new paragraph!";
+        container.appendChild(newParagraph);
+
+
+
+
+    </script>
+</body>
+
+</html>

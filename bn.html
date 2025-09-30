@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Button Events</title>
+</head>
+
+<body>
+
+    <button id="myBtn">Click Me!</button>
+
+    <script>
+        const btn = document.getElementById("myBtn");
+
+        btn.addEventListener("click", function () {
+            alert("Button was clicked!");
+        });
+
+        btn.addEventListener("mouseenter", function () {
+            console.log("Mouse entered the button");
+        });
+
+        btn.addEventListener("mouseleave", function () {
+            console.log("Mouse left the button");
+        });
+
+        btn.addEventListener("keydown", function (event) {
+            console.log("Key pressed while focusing button: ", event.key);
+        });
+    </script>
+
+</body>
+
+</html>

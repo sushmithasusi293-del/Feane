@@ -1,0 +1,16 @@
+h1 {
+    color: white;
+    text-shadow: 2px 2px 5px red,
+        2px 2px 8px blue,
+        2px 2px 8px green;
+
+}
+
+p {
+    /* font-style: italic; */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 20px;
+    color: brown;
+}

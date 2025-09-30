@@ -1,0 +1,72 @@
+.r4 {
+    width: 100%;
+    background: black;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.c1 {
+    width: 50%;
+    height: 600px;
+    margin-left: 150px;
+}
+
+
+.c2 {
+    width: 50%;
+    height: 600px;
+
+
+}
+
+
+.c1 pre {
+    color: #c5a47e;
+    font-size: 30px;
+    /* padding: 40px; */
+    padding-left: 100px;
+    padding-top: 100px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+
+.c1 p {
+    color: gray;
+    font-size: 20px;
+    font-weight: 100px;
+    padding-left: 100px;
+
+
+
+
+}
+
+
+.nb {
+    font-size: small;
+    /* color: #c5a47e; */
+    /* margin: 180px; */
+}
+
+#o {
+    font-size: 15px;
+}
+
+#l {
+    margin-left: 180px;
+    border-radius: 40px;
+    border-color: #c5a47e;
+    background-color: black;
+    color: #c5a47e;
+    padding: 10px;
+}
+
+.c2 {
+    overflow: hidden;
+    position: relative;
+    top: 60px;
+    left: 180px;
+}

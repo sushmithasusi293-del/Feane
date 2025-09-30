@@ -1,0 +1,1 @@
+(window.__LOADABLE_LOADED_CHUNKS__=window.__LOADABLE_LOADED_CHUNKS__||[]).push([[81],{80:function(e,t,_){"use strict";_.r(t);var i=_(0);t.default=function(e){var t=e.width,_=e.height;return i.default.createElement("svg",{width:t||"20",height:_||"24",viewBox:"0 0 16 24"},i.default.createElement("path",{className:"svg_color",fillRule:"evenodd",d:"M0 0v24l20-12z"}))}}}]);

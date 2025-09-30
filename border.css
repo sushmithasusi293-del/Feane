@@ -1,0 +1,25 @@
+.one {
+    color: blue;
+    border-style: dotted;
+    border-width: 1px;
+
+}
+
+.four {
+    color: brown;
+}
+
+.three {
+    color: chartreuse;
+}
+
+p {
+    color: green;
+    border-style: groove;
+    border-radius: 5px;
+}
+
+.two {
+    color: red;
+    border-style: dashed;
+}

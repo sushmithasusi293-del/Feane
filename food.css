@@ -1,0 +1,620 @@
+ol li {
+    font-family: inherit;
+    display: inline;
+    padding-left: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #005099;
+    font-weight: bold;
+
+}
+
+h1 {
+    position: relative;
+    bottom: 40px;
+}
+
+.one {
+    float: right;
+    position: relative;
+    bottom: 110px;
+    right: 210px;
+
+}
+
+img {
+    float: right;
+    position: relative;
+    left: 150px;
+    bottom: 90px;
+}
+
+.box1 {
+    padding: 10px;
+
+    background-image: url("bag.jpg");
+    /* min-height: 550px;
+   min-width: 1000px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    /* padding bottom: 0px; */
+    margin-top: -10px;
+
+
+}
+
+
+.four {
+    color: palevioletred;
+}
+
+.four1 {
+    color: orange;
+}
+
+.four2 {
+    color: orangered;
+}
+
+.four3 {
+    color: lightgreen;
+}
+
+.three {
+    color: #005099;
+    text-align: justify;
+    padding: 160px 150px 150px 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-style: initial;
+
+
+}
+
+button {
+    position: relative;
+    bottom: 170px;
+    left: 50px;
+    width: 180px;
+    height: 50px;
+    border-radius: 40px;
+    color: white;
+    background-color: palevioletred;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.col-1 {
+    width: 33%;
+    height: 480px;
+    background-color: palevioletred;
+
+
+
+}
+
+.col-1 img {
+    position: relative;
+    left: -100px;
+    bottom: 30px;
+}
+
+.col-2 img {
+    position: relative;
+    left: -100px;
+    bottom: 70px;
+}
+
+.col-3 img {
+    position: relative;
+    left: -100px;
+    bottom: 70px;
+}
+
+
+.col-2 {
+    width: 33%;
+    height: 480px;
+    background-color: lightgreen;
+}
+
+.col-3 {
+    width: 34%;
+    height: 480px;
+    background-color: lightskyblue;
+}
+
+.row {
+    text-align: center;
+
+
+}
+
+.col-1 h1 {
+    padding: 40px 40px 0px 40px;
+}
+
+.col-1 h5 {
+    position: relative;
+    bottom: 40px;
+
+}
+
+.col-2 h5 {
+    position: relative;
+    bottom: 80px;
+}
+
+.col-3 h5 {
+    position: relative;
+    bottom: 80px;
+}
+
+.col-2 h1 {
+    padding: 40px;
+}
+
+.col-3 h1 {
+    padding: 40px;
+}
+
+.box2 {
+    height: 300px;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 25px;
+    color: #005099;
+
+    /* background-color: aqua; */
+}
+
+.box2 p {
+    position: relative;
+    top: -60px;
+
+}
+
+.box3 {
+    height: 100px;
+    width: 100px;
+    border-radius: 360px;
+
+
+    background-image: url(i1.jpg);
+
+
+    background-repeat: no-repeat;
+    border: #005099 solid;
+    background-size: 50px;
+    background-position: center;
+    position: relative;
+    top: -40px;
+    left: 80px;
+
+
+
+
+
+
+    /* margin: 20px; */
+}
+
+.box3 p {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.box4 p {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.box5 p {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.box6 p {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.box7 p {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.box8 p {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.box4 {
+    height: 100px;
+    width: 100px;
+    border-radius: 360px;
+
+
+    background-image: url(p1.jpg);
+
+
+    background-repeat: no-repeat;
+    border: #005099 solid;
+    background-size: 40px;
+    background-position: center;
+    position: relative;
+    top: -150px;
+    left: 220px;
+
+
+}
+
+
+.box5 {
+    height: 100px;
+    width: 100px;
+    border-radius: 360px;
+
+
+    background-image: url(p2.jpg);
+
+
+    background-repeat: no-repeat;
+    border: #005099 solid;
+    background-size: 30px;
+    background-position: center;
+    position: relative;
+    top: -256px;
+    left: 360px;
+}
+
+.box6 {
+    height: 100px;
+    width: 100px;
+    border-radius: 360px;
+
+
+    background-image: url(p4.jpg);
+
+
+    background-repeat: no-repeat;
+    border: #005099 solid;
+    background-size: 40px;
+    background-position: center;
+    position: relative;
+    top: -355px;
+    left: 490px;
+}
+
+.box7 {
+    height: 100px;
+    width: 100px;
+    border-radius: 360px;
+
+
+    background-image: url(p3.jpg);
+
+
+    background-repeat: no-repeat;
+    border: #005099 solid;
+    background-size: 40px;
+    background-position: center;
+    position: relative;
+    top: -460px;
+    left: 620px;
+}
+
+.box8 {
+    height: 100px;
+    width: 100px;
+    border-radius: 360px;
+
+
+    background-image: url(p5.jpg);
+
+
+    background-repeat: no-repeat;
+    border: #005099 solid;
+    background-size: 40px;
+    background-position: center;
+    position: relative;
+    top: -570px;
+    left: 750px;
+
+
+}
+
+.box9 {
+    height: 100px;
+    width: 100px;
+    border-radius: 360px;
+
+
+    background-image: url(p6.jpg);
+
+
+    background-repeat: no-repeat;
+    border: #005099 solid;
+    background-size: 40px;
+    background-position: center;
+    position: relative;
+    top: -670px;
+    left: 890px;
+
+
+}
+
+.l1 {
+    width: 5px;
+    height: 102px;
+    rotate: 120deg;
+    background-color: #005099;
+    position: relative;
+    left: 45px;
+
+
+}
+
+.l2 {
+    width: 5px;
+    height: 104px;
+    rotate: 125deg;
+    background-color: #005099;
+    position: relative;
+    left: 45px;
+
+
+}
+
+.l3 {
+    width: 5px;
+    height: 104px;
+    rotate: 125deg;
+    background-color: #005099;
+    position: relative;
+    left: 45px;
+
+
+}
+
+.l4 {
+    width: 5px;
+    height: 104px;
+    rotate: 125deg;
+    background-color: #005099;
+    position: relative;
+    left: 45px;
+
+
+}
+
+.l5 {
+    width: 5px;
+    height: 104px;
+    rotate: 125deg;
+    background-color: #005099;
+    position: relative;
+    left: 45px;
+
+
+}
+
+.l6 {
+    width: 5px;
+    height: 104px;
+    rotate: 125deg;
+    background-color: #005099;
+    position: relative;
+    left: 45px;
+
+
+}
+
+.roww {
+    width: 100%;
+    display: flex;
+
+}
+
+.coll {
+    width: 50%;
+    height: 500px;
+
+
+    background-color: lightgreen;
+    padding-left: 50px;
+}
+
+.coll1 {
+    width: 50%;
+    height: 500px;
+    background-color: lightgreen;
+}
+
+.coll pre {
+    font-size: 40px;
+    font-weight: bold;
+    color: #005099;
+    position: relative;
+    top: -130px;
+
+}
+
+.coll p {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+.coll h5 {
+    position: relative;
+    top: -200px;
+    font-size: 20px;
+    line-height: 1.6;
+    text-decoration: underline;
+    text-decoration-color: aliceblue;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 10px;
+}
+
+.i {
+    position: relative;
+    left: -450px;
+    bottom: -50px;
+
+
+}
+
+.i1 {
+    position: relative;
+    left: -150px;
+    bottom: -50px;
+
+
+}
+
+.i2 {
+    position: relative;
+    right: 10px;
+    bottom: -50px;
+
+
+}
+
+.i3 {
+    position: relative;
+    left: -100px;
+    bottom: -250px;
+}
+
+.i4 {
+    position: relative;
+    left: 230px;
+    bottom: -250px;
+}
+
+.i5 {
+    position: relative;
+    left: 400px;
+    bottom: -150px;
+}
+
+.m1 {
+    color: #005099;
+    font-size: 20px;
+
+    padding-top: 80px;
+    height: 800px;
+    padding-left: 100px;
+}
+
+.s1 {
+    position: relative;
+    left: -600px;
+    bottom: 20px;
+}
+
+.s2 {
+    position: relative;
+    left: -50px;
+    bottom: 720px;
+}
+
+.m2 {
+    background-color: #005099;
+    color: aliceblue;
+    padding-top: 100px;
+
+
+}
+
+.m2 h1 {
+    position: relative;
+    left: 400px;
+}
+
+.roww3 {
+    width: 100%;
+    display: flex;
+}
+
+.cloumn {
+    width: 50%;
+    height: 600px;
+    background-color: white;
+    margin-top: -544px;
+}
+
+.cloumn1 {
+    width: 50%;
+    height: 600px;
+    background-color: white;
+    margin-top: -544px;
+}
+
+.cloumn img {
+    position: relative;
+    bottom: -100px;
+    left: -100px;
+}
+
+pre {
+    padding-top: 100px;
+    color: #005099;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.roww4 {
+    width: 100%;
+    display: flex;
+}
+
+.b {
+    width: 50%;
+    height: 500px;
+
+}
+
+.b1 {
+    width: 50%;
+    height: 500px;
+    background-color: lightslategrey;
+
+}
+
+.b1 h1 {
+    font-size: 50px;
+    padding-top: 20px;
+    position: relative;
+    color: #005099;
+}
+
+.b img {
+    position: relative;
+    bottom: -2px;
+    left: -5px;
+}
+
+.b1 pre {
+    position: relative;
+    bottom: 150px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.b1 h5 {
+    position: relative;
+    bottom: 160px;
+    left: 10px;
+    text-decoration: underline;
+    text-decoration-color: lightblue;
+    text-decoration-thickness: 5px;
+}

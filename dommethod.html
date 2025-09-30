@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="j1">welcome</h1>
+    <p class="j2">sushmitha</h1>
+    <p>A paragraph is a unit of writing composed of one or more sentences that centers on a single, coherent idea or
+        topic, serving to organize written work by creating a distinct section that is easy for readers to follow. Good
+        paragraphs typically begin with a topic sentence that introduces the main idea, followed by supporting sentences
+        that develop and explain this idea, and may conclude with a summary sentence. </p>
+
+    <p class="j3">sdfghjkl</p>
+    <script>
+        let v1 = document.getElementById("j1");
+        v1.style.color = "red";
+        v1.style.textShadow = "2px 2px 5px blue";
+
+        let v2 = document.getElementsByClassName("j2")[0];
+        let v6 = document.createElement("p");
+        v6.innerHTML = "wertyuiopbnm,,,,,,,,,,,,,,,,,,,,,,,";
+        v2.appendChild(v6);
+        v2.style.color = "blue";
+        v2.style.fontStyle = "italic";
+        v2.style.fontWeight = "bold";
+        v2.style.fontSize = "50px";
+
+        let v3 = document.getElementsByTagName("p");
+        v3[1].style.color = "red";
+
+        let v4 = document.querySelector(".j3");
+        v4.style.color = "green";
+        let v5 = document.createElement("h1");
+        v5.innerHTML = "ths is heading";
+        document.body.appendChild(v5);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

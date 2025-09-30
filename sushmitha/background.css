@@ -1,0 +1,18 @@
+body {
+    /* opacity: 0.7; */
+    /* background-color: blue; */
+    /* background-image: url("css.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* color: blue; */
+    /* background-position: left top; */
+
+
+    /* background-position: left top; */
+    /* background-attachment: fixed; */
+    background-image: url("par.jpg");
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-attachment: fixed;
+    background-position: center bottom;
+}

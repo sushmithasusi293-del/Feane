@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+
+<body>
+
+    <!-- <h1 id="head">welcome</h1>
+    <h1 id="head1">hello</h1> -->
+    <h1 class="head3">hello world</h1>
+    <h2 class="head3">Hello</h2>
+    <div class="head3">hi</div>
+    <h1 class="more">WELCOME</h1>
+
+
+    <p>A paragraph is a unit of writing composed of one or more sentences that centers on a single, coherent idea or
+        topic, serving to organize written work by creating a distinct section that is easy for readers to follow. Good
+        paragraphs typically begin with a topic sentence that introduces the main idea, followed by supporting sentences
+        that develop and explain this idea, and may conclude with a summary sentence.
+    </p>
+
+    <div class="z">
+        <h1>hello</h1>
+    </div>
+    <div class="z">
+        <h1>hellooooooo</h1>
+    </div>
+    <div class="z">
+        <h1>hellooooooooo</h1>
+    </div>
+    <button>click me</button>
+
+
+
+    <!-- <p id="para">Color me!</p>
+    <button onclick="changeColor()">Change Color</button> -->
+
+    <script>
+        // let head = document.getElementById("head");
+        // console.log(head);
+        // head.style.color = "red";
+        // head.style.fontSize = "50px";
+
+        // let head1 = document.getElementById("head1");
+        // console.log(head1);
+        // head1.style.color = "red";
+        // head1.style.fontSize = "50px";
+        // head1.style.paddingLeft = "640px";
+
+
+
+        let test = document.getElementsByClassName("head3")[2];
+        console.log(test);
+        test.style.color = "red";
+        test.style.fontSize = "50px";
+        test.style.paddingLeft = "640px";
+
+
+
+        let test1 = document.getElementsByTagName("p")[0];
+        test1.style.color = "red";
+        test1.style.fontSize = "25px";
+        // test1.style.paddingLeft = "100px";
+        test1.style.textAlign = "justify";
+
+
+        let test2 = document.getElementsByTagName("button")[0];
+        test2.style.backgroundColor = "red";
+
+        let test3 = document.querySelector(".more");
+        test3.style.color = "blue";
+        test3.style.border = '2px solid black';
+        test3.style.backgroundColor = "yellow";
+
+        let test4 = document.querySelectorAll(".z");
+        test4[0].style.color = "blue";
+        test4[1].style.color = "red";
+        test4[2].style.color = "aqua";
+        // test4.style.border='2px solid black';
+        // test4.style.backgroundColor="yellow";
+
+
+
+
+        // function changeColor() {
+        //     document.getElementById("para").style.color = "red";
+        // }
+
+        let test5 = document.createElement("p");
+        test5.innerHTML = "A paragraph is a unit of writing composed of one or more sentences that centers on a single, coherent idea or topic, serving to organize written work by creating a distinct section that is easy for readers to follow. Good paragraphs typically begin with a topic sentence that introduces the main idea, followed by supporting sentences that develop and explain this idea, and may conclude with a summary sentence. "
+        document.body.appendChild(test5);
+        
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

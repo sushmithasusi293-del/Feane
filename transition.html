@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+
+            position: relative;
+        }
+
+        .box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background: red;
+            transition: width 2s, height 4s, transform 2s;
+            margin-left: 100px;
+            left: 150px;
+            top: 100px;
+            z-index: 2;
+
+
+
+        }
+
+        .box:hover {
+            width: 100px;
+            height: 300px;
+            transform: rotate(360deg);
+        }
+
+        .box1:hover {
+            width: 100px;
+            height: 300px;
+            transform: rotate(360deg);
+        }
+
+        .box2:hover {
+            width: 100px;
+            height: 300px;
+            transform: rotate(360deg);
+        }
+
+        .box1 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            transition: width 2s, height 4s, transform 2s;
+            margin-left: 10px;
+            z-index: 1;
+
+
+        }
+
+        .box2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            transition: width 2s, height 4s, transform 2s;
+            margin-top: -100px;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxx">WELCOME</h1>
+        <div class="box">block1</div>
+        <div class="box1">block2</div>
+        <div class="box2">block3</div>
+
+</body>
+
+</html>

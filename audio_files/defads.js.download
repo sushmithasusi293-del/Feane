@@ -1,0 +1,315 @@
+var ad_config = {
+	defSlots: [
+		[320, 50],
+		[468, 60],
+		[728, 90]
+	]
+};
+
+function defineAdSlots(wapads) {
+	var _auds = new Array();
+	if (typeof(_ccaud) != 'undefined') {
+		for (var i = 0; i < _ccaud.Profile.Audiences.Audience.length; i++)
+			if (i < 200)
+				_auds.push(_ccaud.Profile.Audiences.Audience[i].abbr);
+	}
+
+	var _HDL = '';
+	var _ARC1 = 'strong';
+	var _Hyp1 = '';
+	var _article = '';
+	
+	var _SCN = (typeof _SCN_pg != "undefined") ? _SCN_pg : '';
+	var _Tmpl = (typeof _Tmpl_pg != "undefined") ? _Tmpl_pg : '';
+	var _Tmpl_SCN = (_Tmpl && _SCN) ? _Tmpl+"_"+_SCN : '';
+	
+	var _tval = function(v) {
+		if (typeof(v) == 'undefined') return '';
+		if (v.length > 100) return v.substr(0, 100);
+		return v;
+	};
+
+	var keys = Object.keys(wapads);
+	for (var index = 0; index < keys.length; ++index) {
+		var keyName = keys[index];
+		var v = wapads[keyName];
+		var type = v['type'];
+
+		capturedElement = document.getElementsByClassName(type)
+		// visibility = capturedElement.length > 0 && (getComputedStyle(capturedElement[0]).visibility == "visible");
+		visibility = capturedElement.length > 0
+		
+		if(visibility){
+			if(v['type'].indexOf("OP_Innov1") >= 0  || v['type'].indexOf("OP_Inter") >= 0 || v['type'].indexOf("OP_Pop") >= 0 || v['type'].indexOf("OP_Shosh") >= 0 || v['type'].indexOf("OP_SPTLIT") >= 0){
+				var gtag = googletag.defineOutOfPageSlot(v['name'], v['id']).addService(googletag.pubads());
+			}else{
+				var gtag = googletag.defineSlot(v['name'], (v['size'] ? v['size'] : ad_config.defSlots), v['id']).addService(googletag.pubads());
+				//googletag.pubads().set("page_url","https://gaana.com");
+			}
+			var mlb;
+			if (v['mlb'] && v['mlb'].length > 0) {
+				mlb = googletag.sizeMapping();
+				for (var j = 0; j < v['mlb'].length; j++) {
+					mlb = mlb.addSize(v['mlb'][j][0], v['mlb'][j][1]);
+				}
+				gtag.defineSizeMapping(mlb.build());
+			}
+			gtag.addService(googletag.pubads());
+		}
+	};
+
+	googletag.pubads().setTargeting('sg', _auds).setTargeting('HDL', _tval(_HDL)).setTargeting('ARC1', _tval(_ARC1)).setTargeting('Hyp1', _tval(_Hyp1)).setTargeting('article', _tval(_article));
+	// .setTargeting(_Tmpl_SCN_var, _Tmpl_SCN + '');
+	// googletag.pubads().enableSingleRequest();
+	//googletag.pubads().collapseEmptyDivs(true);
+//	TimesGDPR.common.consentModule.gdprCallback(function(data) {
+//			if( TimesGDPR.common.consentModule.isEUuser() ) {
+//				googletag.pubads().setRequestNonPersonalizedAds(1);
+//			}
+//			googletag.enableServices();
+//		} );
+
+ //In gdpr load non personalization ads
+//        if(window.TimesGDPR && TimesGDPR.common.consentModule.isEUuser()){
+//            console.log('personalize ads');
+//           //0 means personalize ads and 1 means non-personalize ads
+//           var isNonPersonalizeAds = TimesGDPR.common.consentModule.isConsentGiven() ? 0: 1;
+//           googletag.pubads().setRequestNonPersonalizedAds(isNonPersonalizeAds);
+//        }
+
+// if (window.TimesGDPR && window.TimesGDPR.common) {
+//         window.TimesGDPR && window.TimesGDPR.common.consentModule.gdprCallback(function (P) {
+//             if (P.isEUuser && P.didUserOptOut === false) {
+//                 window.googletag.pubads().setRequestNonPersonalizedAds(0)
+//             } else {
+//                 if (P.isEUuser) {
+//                     window.googletag.pubads().setRequestNonPersonalizedAds(1)
+//                 }
+//             }
+//         });
+//     }
+	 googletag.enableServices();
+}
+
+function resizeAdInfo() {
+	/*'atf_300': {
+		resize: function() {
+			$('.ATF_300').css({
+				'height': '250px'
+			});
+		}
+	},
+	'btf': {
+		resize: function() {
+			$('[data-node="footer"]').css({
+				'margin-top': '10px'
+			});
+		}
+	}*/
+}
+
+function createAds(wapads) {
+	var keys = Object.keys(wapads);
+	for (var index = 0; index < keys.length; ++index) {
+		var keyName = keys[index];
+		var v = wapads[keyName];
+		var type = v['type'];
+
+		capturedElement = document.getElementsByClassName(type)
+		visibility = capturedElement.length > 0 && (getComputedStyle(capturedElement[0]).visibility == "visible");
+
+
+		if(visibility){
+			// create script element
+			var tmpScript = document.createElement("script");
+			tmpScript.setAttribute('type', 'text/javascript');
+
+			// create div element
+			var div = document.createElement("div");
+			div.setAttribute('id', v['id']);
+			div.appendChild(tmpScript);
+
+			if(v['type'].indexOf("OP_Innov1") >= 0  || v['type'].indexOf("OP_Inter") >= 0 || v['type'].indexOf("OP_Pop") >= 0 || v['type'].indexOf("OP_Shosh") >= 0 || v['type'].indexOf("OP_SPTLIT") >= 0){
+				var body = document.body;
+				body.appendChild(div);
+			} else {
+				if(capturedElement.length > 0){
+					capturedElement[0].append(div);
+					//capturedElement[0].classList.remove(type);
+				}
+			}
+			
+			googletag.cmd.push(function(){googletag.display(v['id']);});
+		}
+	};
+}
+
+function init_Ads(callback) {
+	if(window.googletag && googletag.apiReady){
+		googletag?.cmd?.push(callback);
+	}else{
+		googletag = window.googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function() {
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+			googletag.cmd.push(callback);
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		})();
+	}
+}
+
+function initGoogleAds(wapads) {
+	init_Ads(function() {
+		googletag.cmd.push(defineAdSlots(wapads));
+		googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+			if (event && event.slot) {
+				var slotName = event.slot.getAdUnitPath().toLowerCase();
+				// console.log(slotName);
+				for (var i in resizeAdInfo) {
+					if (slotName.indexOf(i) != -1) {
+						resizeAdInfo[i].resize();
+						break;
+					}
+				}
+			}
+		});
+		createAds(wapads);
+	});
+}
+
+function destroyslots(){
+	if (window.googletag && googletag.apiReady) {
+		googletag?.cmd?.push( () => { googletag.destroySlots(); });
+	}
+}
+
+var wapads = {
+	'MWEB': {
+		"HOME": {
+			'MirchiPlus_Mweb_Home_MediumRectangle_ATF': {
+				'id': 'MirchiPlus_Mweb_Home_MediumRectangle_ATF',
+				'name': '/72913078/MirchiPlus_Mweb_Home_MediumRectangle_ATF',
+				'type': 'MirchiPlus_Mweb_Home_MediumRectangle_ATF',
+				'size': [[320,50]]
+			},
+			'MirchiPlus_Mweb_Home_MediumRectangle_BTF1': {
+				'id': 'MirchiPlus_Mweb_Home_MediumRectangle_BTF1',
+				'name': '/72913078/MirchiPlus_Mweb_Home_MediumRectangle_BTF1',
+				'type': 'MirchiPlus_Mweb_Home_MediumRectangle_BTF1',
+				'size': [[300,250]]
+			},
+			'MirchiPlus_Mweb_Home_MediumRectangle_BTF11': {
+				'id': 'MirchiPlus_Mweb_Home_MediumRectangle_BTF11',
+				'name': '/72913078/MirchiPlus_Mweb_Home_MediumRectangle_BTF1',
+				'type': 'MirchiPlus_Mweb_Home_MediumRectangle_BTF11',
+				'size': [[300,250]]
+			},
+			'MirchiPlus_Mweb_Home_MediumRectangle_BTF2': {
+				'id': 'MirchiPlus_Mweb_Home_MediumRectangle_BTF2',
+				'name': '/72913078/MirchiPlus_Mweb_Home_MediumRectangle_BTF2',
+				'type': 'MirchiPlus_Mweb_Home_MediumRectangle_BTF2',
+				'size': [[300,250]]
+			},
+		},
+		"ROS": {
+			"MirchiPlus_Mweb_ROS_MediumRectangle_ATF": {
+				"id": "MirchiPlus_Mweb_ROS_MediumRectangle_ATF",
+				"name": "/72913078/MirchiPlus_Mweb_ROS_MediumRectangle_ATF",
+				"type": "MirchiPlus_Mweb_ROS_MediumRectangle_ATF",
+				"size": [[320,50]]
+			},
+			"MirchiPlus_Mweb_ROS_MediumRectangle_BTF1": {
+				"id": "MirchiPlus_Mweb_ROS_MediumRectangle_BTF1",
+				"name": "/72913078/MirchiPlus_Mweb_ROS_MediumRectangle_BTF1",
+				"type": "MirchiPlus_Mweb_ROS_MediumRectangle_BTF1",
+				"size": [[300,250]]
+			},
+			"MirchiPlus_Mweb_ROS_MediumRectangle_BTF2": {
+				"id": "MirchiPlus_Mweb_ROS_MediumRectangle_BTF2",
+				"name": "/72913078/MirchiPlus_Mweb_ROS_MediumRectangle_BTF2",
+				"type": "MirchiPlus_Mweb_ROS_MediumRectangle_BTF2",
+				"size": [[300,250]]
+			}
+		}
+	},
+	'WEB': {
+		"HOME": {
+			'MirchiPlus_DSKTP_Home_BillBoard_ATF': {
+				'id': 'MirchiPlus_DSKTP_Home_BillBoard_ATF',
+				'name': '/72913078/MirchiPlus_DSKTP_Home_BillBoard_ATF',
+				'type': 'MirchiPlus_DSKTP_Home_BillBoard_ATF',
+				'size': [[728,90]]
+			},
+			'MirchiPlus_DSKTP_Home_Filmstrip_BTF': {
+				'id': 'MirchiPlus_DSKTP_Home_Filmstrip_BTF',
+				'name': '/72913078/MirchiPlus_DSKTP_Home_Filmstrip_BTF',
+				'type': 'MirchiPlus_DSKTP_Home_Filmstrip_BTF',
+				'size': [[300,250], [300,600]]
+			},
+			'MirchiPlus_DSKTP_Home_MediumRectangle_ATF': {
+				'id': 'MirchiPlus_DSKTP_Home_MediumRectangle_ATF',
+				'name': '/72913078/MirchiPlus_DSKTP_Home_MediumRectangle_ATF',
+				'type': 'MirchiPlus_DSKTP_Home_MediumRectangle_ATF',
+				'size': [[300,250]]
+			},
+		},
+		"ROS": {
+			"MirchiPlus_DSKTP_ROS_BillBoard_ATF": {
+				"id": "MirchiPlus_DSKTP_ROS_BillBoard_ATF",
+				"name": "/72913078/MirchiPlus_DSKTP_ROS_BillBoard_ATF",
+				"type": "MirchiPlus_DSKTP_ROS_BillBoard_ATF",
+				"size": [[728,90]]
+			},
+			"MirchiPlus_DSKTP_ROS_Filmstrip_BTF": {
+				"id": "MirchiPlus_DSKTP_ROS_Filmstrip_BTF",
+				"name": "/72913078/MirchiPlus_DSKTP_ROS_Filmstrip_BTF",
+				"type": "MirchiPlus_DSKTP_ROS_Filmstrip_BTF",
+				"size": [[300,250], [300,600]]
+			},
+			"MirchiPlus_DSKTP_ROS_MediumRectangle_ATF": {
+				"id": "MirchiPlus_DSKTP_ROS_MediumRectangle_ATF",
+				"name": "/72913078/MirchiPlus_DSKTP_ROS_MediumRectangle_ATF",
+				"type": "MirchiPlus_DSKTP_ROS_MediumRectangle_ATF",
+				"size": [[300,250]]
+			}
+		}
+	} 
+}
+
+	/*Gaana_MWeb_HP_ATF:{
+		id:'div-gpt-ad-1701845302201-0',
+		name:'/21715142772/Gaana_MWeb/Gaana_MWeb_Home/Gaana_MWeb_HP_ATF',
+		type:'Gaana_MWeb_HP_ATF',
+		size:[[300, 250], [320, 50]],
+	},
+	Gaana_MWeb_HP_BTF:{
+		id:'div-gpt-ad-1701845382697-1',
+		name:'/21715142772/Gaana_MWeb/Gaana_MWeb_Home/Gaana_MWeb_HP_BTF',
+		type:'Gaana_MWeb_HP_BTF',
+		size:[[320, 50], [300, 250]],
+	},
+	Gaana_Mweb_HP_MTF_1:{
+		id:'div-gpt-ad-1701845450948-0',
+		name:'/21715142772/Gaana_MWeb/Gaana_MWeb_Home/Gaana_Mweb_HP_MTF_1',
+		type:'Gaana_Mweb_HP_MTF_1',
+		size:[[300, 250], [320, 50]],
+	},
+	Gaana_Mweb_HP_MTF_2:{
+		id:'div-gpt-ad-1701845500074-3',
+		name:'/21715142772/Gaana_MWeb/Gaana_MWeb_Home/Gaana_Mweb_HP_MTF_2',
+		type:'Gaana_Mweb_HP_MTF_2',
+		size: [[300, 250], [320, 50]],
+	},
+	Gaana_MWeb_HP_MREC:{
+		id:'div-gpt-ad-1701845577313-3',
+		name:'/21715142772/Gaana_MWeb/Gaana_MWeb_Home/Gaana_MWeb_HP_MREC',
+		type:'Gaana_MWeb_HP_MREC',
+		size: [[300, 250], [320, 50]],
+	}*/
+
+//setTimeout(function() {initGoogleAds(wapads)}, 4000);

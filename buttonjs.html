@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="n4">hi guys</p>
+
+    <button id="btn">click me!</button>
+    <button onclick="myFunction()">click me</button>
+    <p id="n2">click me</p>
+    <p id="n1"></p>
+
+
+
+    <script>
+
+        let bu3 = document.getElementById("n4");
+        bu3.addEventListener("mouseover", () => {
+            bu3.style.color = "red";
+
+        })
+
+
+        let bu4 = document.getElementById("n4");
+        bu4.addEventListener("mouseout", () => {
+            bu4.style.color = "black";
+
+        })
+
+
+        let bu = document.getElementById("btn");
+        bu.addEventListener("dblclick", () => {
+            
+            alert("button");
+        })
+
+
+
+        let bu1 = document.getElementById("n2");
+        bu1.addEventListener("click", () => {
+            alert("sumbit");
+        })
+
+        function myFunction() {
+            document.getElementById("n1").innerHTML = "button clickedddddd";
+        }
+
+
+    </script>
+</body>
+
+</html>
