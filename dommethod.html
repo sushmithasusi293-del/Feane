@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .my style {                
+            background-color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,6 +21,11 @@
         that develop and explain this idea, and may conclude with a summary sentence. </p>
 
     <p class="j3">sdfghjkl</p>
+
+
+    <div id="myDIV">
+        <p>I am a myDIV.</p>
+    </div>
     <script>
         let v1 = document.getElementById("j1");
         v1.style.color = "red";
@@ -41,6 +51,10 @@
 
 
 
+        function myFunction() {
+            const list = document.getElementById("myDIV").classList;
+            list.add("myStyle");
+        }
 
 
     </script>

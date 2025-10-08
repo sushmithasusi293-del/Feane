@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let f1 = new Promise((re, reject) => {
+            let bookingSuccess = true
+            if (bookingSuccess) {
+                re()
+            }
+            else {
+                reject()
+            }
+        })
+        f1.then((success) => console.log("booking done"))
+            .catch((faliure) => console.log("booking reject"))
+    </script>
+</body>
+
+</html>
